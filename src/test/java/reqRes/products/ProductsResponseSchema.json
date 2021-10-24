@@ -1,0 +1,28 @@
+{
+  "schema": {
+    "meta": "#object",
+    "data": "#array"
+  },
+  "meta": {
+    "pagination": {
+      "total": "#number",
+      "pages": "#number",
+      "page": "#number",
+      "limit": "#number",
+      "links": {
+        "previous": "##null",
+        "current": "#string",
+        "next": "#string"
+      }
+    }
+  },
+  "data": [
+    {
+      "id": "#number",
+      "user_id": "#number",
+      "title": "#string",
+      "due_on": "#string",
+      "status": "#string"
+    }
+  ]
+}
