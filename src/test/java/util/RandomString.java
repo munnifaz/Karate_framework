@@ -23,7 +23,17 @@ public class RandomString {
         return sb.toString();
     }
 
-    //write a method to generate a random number of user specified 8
+    public static String generateRandomNumbers(int length) {
+        List<String> list = new ArrayList<>();
+        for(int i=0;i<10;i++)
+            list.add(String.valueOf(i));
+        StringBuilder sb = new StringBuilder();
+        Random random = new Random();
+        for(int i=0; i<length; i++) {
+            sb.append(list.get(random.nextInt(list.size())));
+        }
+        return sb.toString();
+    }
 
     public static String generateAlphabet(int length) {
         List<String> list = new ArrayList<>();
