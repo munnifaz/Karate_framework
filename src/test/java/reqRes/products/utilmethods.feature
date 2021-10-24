@@ -1,4 +1,4 @@
-@utils
+@regression
 Feature: Testing Util Methods
 
 Scenario Outline: generate a random string

@@ -25,7 +25,7 @@ Feature: Testing Bigbasket
     |99|
 
 
-
+@regression
 Scenario: Validate Response Schema
   * def productSchema = read("classpath:reqRes/products/ProductsResponseSchema.json")
   Given url 'https://gorest.co.in/public/v1/todos'
@@ -44,7 +44,7 @@ Scenario: Validate Response Schema
 
 
 
-  @check
+  @regression
   Scenario Outline: Create a new user and verify the user
     * def requestUser = read("classpath:reqRes/products/userRequest.json")
 
