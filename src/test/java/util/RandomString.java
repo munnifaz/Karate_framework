@@ -24,6 +24,21 @@ public class RandomString {
     }
 
     //write a method to generate a random number of user specified 8
-    //write a method to generate a random alphabets of user specified 8
+
+    public static String generateAlphabet(int length) {
+        List<String> list = new ArrayList<>();
+        char[] alphabets = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
+        'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+        for(char a : alphabets) {
+            list.add(String.valueOf(a).toLowerCase());
+            list.add(String.valueOf(a).toUpperCase());
+        }
+        StringBuilder sb = new StringBuilder();
+        Random random = new Random();
+        for(int i=0; i<length; i++) {
+            sb.append(list.get(random.nextInt(list.size())));
+        }
+        return sb.toString();
+    }
 
 }
