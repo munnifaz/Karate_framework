@@ -9,8 +9,8 @@ class ReqResTest {
 
     @Test
     void testParallel() {
-        Results results = Runner.path("classpath:reqRes/products")
-                .tags("utils")
+        Results results = Runner.path("classpath:reqRes")
+                //.tags("utils")
                 //.outputCucumberJson(true)
                 .parallel(1);
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
